@@ -21,7 +21,7 @@ Route::group(
     ], function()
 {
     Route::get('/', function () {
-        return view('back.cover');
+        return view('back.dashboard.dashboard');
     })->name('home');
 
 });
