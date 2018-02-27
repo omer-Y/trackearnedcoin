@@ -20,9 +20,8 @@ Route::group(
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath','localize' ]
     ], function()
 {
-    /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
     Route::get('/', function () {
-        return view('welcome');
-    });
+        return view('back.cover');
+    })->name('home');
 
 });

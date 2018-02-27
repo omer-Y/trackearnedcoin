@@ -1,0 +1,9 @@
+@extends('back.cover')
+@section('content')
+@endsection
+@section('title')
+@endsection
+@section('style')
+@endsection
+@section('script')
+@endsection
