@@ -9,7 +9,7 @@
                     <div class='col-md-3'>
                         <div class="layers bd bgc-white p-20">
                             <div class="layer w-100 mB-10">
-                                <h6 class="lh-1">Total Visits</h6>
+                                <h6 class="lh-1">@lang('dashboard/page.zpool_balance')</h6>
                             </div>
                             <div class="layer w-100">
                                 <div class="peers ai-sb fxw-nw">
@@ -28,7 +28,7 @@
                     <div class='col-md-3'>
                         <div class="layers bd bgc-white p-20">
                             <div class="layer w-100 mB-10">
-                                <h6 class="lh-1">Total Page Views</h6>
+                                <h6 class="lh-1">@lang('dashboard/page.miningpoolhub_balance')</h6>
                             </div>
                             <div class="layer w-100">
                                 <div class="peers ai-sb fxw-nw">
@@ -47,7 +47,7 @@
                     <div class='col-md-3'>
                         <div class="layers bd bgc-white p-20">
                             <div class="layer w-100 mB-10">
-                                <h6 class="lh-1">Unique Visitor</h6>
+                                <h6 class="lh-1">@lang('dashboard/page.hashrafinery_balance')</h6>
                             </div>
                             <div class="layer w-100">
                                 <div class="peers ai-sb fxw-nw">
@@ -66,7 +66,7 @@
                     <div class='col-md-3'>
                         <div class="layers bd bgc-white p-20">
                             <div class="layer w-100 mB-10">
-                                <h6 class="lh-1">Bounce Rate</h6>
+                                <h6 class="lh-1">@lang('dashboard/page.ahashpool_balance')</h6>
                             </div>
                             <div class="layer w-100">
                                 <div class="peers ai-sb fxw-nw">
@@ -88,7 +88,7 @@
                     <div class='col-md-3'>
                         <div class="layers bd bgc-white p-20">
                             <div class="layer w-100 mB-10">
-                                <h6 class="lh-1">Total Visits</h6>
+                                <h6 class="lh-1">@lang('dashboard/page.nanopool_balance')</h6>
                             </div>
                             <div class="layer w-100">
                                 <div class="peers ai-sb fxw-nw">
@@ -107,7 +107,7 @@
                     <div class='col-md-3'>
                         <div class="layers bd bgc-white p-20">
                             <div class="layer w-100 mB-10">
-                                <h6 class="lh-1">Total Page Views</h6>
+                                <h6 class="lh-1">@lang('dashboard/page.nicehash_balance')</h6>
                             </div>
                             <div class="layer w-100">
                                 <div class="peers ai-sb fxw-nw">
@@ -126,7 +126,7 @@
                     <div class='col-md-3'>
                         <div class="layers bd bgc-white p-20">
                             <div class="layer w-100 mB-10">
-                                <h6 class="lh-1">Unique Visitor</h6>
+                                <h6 class="lh-1">@lang('dashboard/page.new_pool')</h6>
                             </div>
                             <div class="layer w-100">
                                 <div class="peers ai-sb fxw-nw">
@@ -145,7 +145,7 @@
                     <div class='col-md-3'>
                         <div class="layers bd bgc-white p-20">
                             <div class="layer w-100 mB-10">
-                                <h6 class="lh-1">Bounce Rate</h6>
+                                <h6 class="lh-1">@lang('dashboard/page.new_pool')</h6>
                             </div>
                             <div class="layer w-100">
                                 <div class="peers ai-sb fxw-nw">
@@ -168,51 +168,87 @@
                         <div class="bd bgc-white">
                             <div class="layers">
                                 <div class="layer w-100 pX-20 pT-20">
-                                    <h6 class="lh-">Monthly Stats</h6>
+                                    <h6 class="lh-">@lang('dashboard/page.earning_graphs')</h6>
                                 </div>
                                 <div class="layer w-100 p-20">
-                                    <canvas id="line-chart" height="220"></canvas>
+                                    <canvas id="myChart" height="220" ></canvas>
+                                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"></script>
+
+                                    <script>
+                                        var ctx = document.getElementById("myChart");
+                                        ctx.height = 80;
+                                        const lineCtx = ctx.getContext('2d');
+
+
+                                        var myChart = new Chart(lineCtx, {
+                                            type: 'line',
+                                            data: {
+                                                labels: ["Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi","Pazar"],
+                                                datasets: [{
+                                                    label: '# of Votes',
+                                                    data                 : [60, 50, 70, 60, 50, 70, 60],
+                                                    borderColor: [
+                                                        'rgba(255,99,132,1)',
+                                                    ],
+                                                    borderWidth: 2
+                                                },
+                                                    {
+                                                        label: '# of Votes',
+                                                        data                 : [123, 123, 123, 123, 144, 124, 60],
+                                                        borderColor: [
+                                                            'rgba(255,99,132,1)',
+                                                        ],
+                                                        borderWidth: 2
+                                                    },
+                                                    {
+                                                        label: '# of Votes',
+                                                        data                 : [1, 54, 76, 78, 45, 34, 95],
+                                                        borderColor: [
+                                                            'rgba(255,99,132,1)',
+                                                        ],
+                                                        borderWidth: 2
+                                                    }]
+                                            },
+                                            options: {
+                                                legend: {
+                                                    display: false,
+                                                },
+                                            }
+                                        });
+                                    </script>
                                 </div>
                                 <div class="layer bdT p-20 w-100">
                                     <div class="peers ai-c jc-c gapX-20">
                                         <div class="peer">
                                             <span class="fsz-def fw-600 mR-10 c-grey-800">10% <i class="fa fa-level-up c-green-500"></i></span>
-                                            <small class="c-grey-500 fw-600">APPL</small>
+                                            <small class="c-grey-500 fw-600">@lang('dashboard/page.zpool_change')</small>
                                         </div>
                                         <div class="peer fw-600">
                                             <span class="fsz-def fw-600 mR-10 c-grey-800">2% <i class="fa fa-level-down c-red-500"></i></span>
-                                            <small class="c-grey-500 fw-600">Average</small>
+                                            <small class="c-grey-500 fw-600">@lang('dashboard/page.miningpoolhub_change')</small>
                                         </div>
                                         <div class="peer fw-600">
                                             <span class="fsz-def fw-600 mR-10 c-grey-800">15% <i class="fa fa-level-up c-green-500"></i></span>
-                                            <small class="c-grey-500 fw-600">Sales</small>
+                                            <small class="c-grey-500 fw-600">@lang('dashboard/page.hashrafinery_change')</small>
                                         </div>
                                         <div class="peer fw-600">
                                             <span class="fsz-def fw-600 mR-10 c-grey-800">8% <i class="fa fa-level-down c-red-500"></i></span>
-                                            <small class="c-grey-500 fw-600">Profit</small>
+                                            <small class="c-grey-500 fw-600">@lang('dashboard/page.ahashpool_change')</small>
+                                        </div>
+                                        <div class="peer fw-600">
+                                            <span class="fsz-def fw-600 mR-10 c-grey-800">8% <i class="fa fa-level-down c-red-500"></i></span>
+                                            <small class="c-grey-500 fw-600">@lang('dashboard/page.nanopool_change')</small>
+                                        </div>
+                                        <div class="peer fw-600">
+                                            <span class="fsz-def fw-600 mR-10 c-grey-800">8% <i class="fa fa-level-down c-red-500"></i></span>
+                                            <small class="c-grey-500 fw-600">@lang('dashboard/page.nicehash_change')</small>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-12">
-                        <!-- #Site Visits ==================== -->
-                        <div class="bd bgc-white">
-                            <div class="peers fxw-nw@lg+ ai-s">
-                                <div class="peer peer-greed w-70p@lg+ w-100@lg- p-20">
-                                    <div class="layers">
-                                        <div class="layer w-100 mB-10">
-                                            <h6 class="lh-1">Site Visits</h6>
-                                        </div>
-                                        <div class="layer w-100">
-                                            <div id="world-map-marker"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -224,4 +260,5 @@
 @section('style')
 @endsection
 @section('script')
+
 @endsection

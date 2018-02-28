@@ -126,7 +126,7 @@
                 </li>
                 <hr>
                 <li class="nav-item">
-                    <a class="sidebar-link" href="index.html">
+                    <a class="sidebar-link" href="{{route('home')}}">
                 <span class="icon-holder">
                   <i class="c-blue-500 ti-home"></i>
                 </span>
@@ -442,6 +442,8 @@
         </footer>
     </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <script type="text/javascript" src="{{asset('js/vendor.js')}}"></script><script type="text/javascript" src="{{asset('js/bundle.js')}}"></script>
 @yield('script')
 

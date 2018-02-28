@@ -20,8 +20,5 @@ Route::group(
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath','localize' ]
     ], function()
 {
-    Route::get('/', function () {
-        return view('back.dashboard.dashboard');
-    })->name('home');
-
+    Route::get(LaravelLocalization::transRoute('routes.home'), 'Back\Dashboard\dashboardController@index')->name('home');
 });
