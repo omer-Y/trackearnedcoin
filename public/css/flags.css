@@ -1,0 +1,9 @@
+.flag {
+    width: 25px;
+    height: 20px;
+    background-size: cover;
+}
+
+.flag.flag-tr {background-image: url('../images/Flags/tr.svg')}
+.flag.flag-en {background-image: url('../images/Flags/gb-eng.svg')}
+.flag.flag-kr {background-image: url('../images/Flags/kr.svg')}

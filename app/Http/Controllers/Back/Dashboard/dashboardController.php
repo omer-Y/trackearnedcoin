@@ -10,4 +10,8 @@ class dashboardController extends Controller
     public function index(){
         return view('back.dashboard.dashboard');
     }
+    public function chat()
+    {
+        return view('back.dashboard.chat');
+    }
 }

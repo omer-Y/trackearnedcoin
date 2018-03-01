@@ -14,7 +14,7 @@
                             <div class="layer w-100">
                                 <div class="peers ai-sb fxw-nw">
                                     <div class="peer peer-greed">
-                                        <span id="sparklinedash"></span>
+                                        <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-green-50 c-green-500">+10%</span>
                                     </div>
                                     <div class="peer">
                                         <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-green-50 c-green-500">+10%</span>
@@ -33,7 +33,7 @@
                             <div class="layer w-100">
                                 <div class="peers ai-sb fxw-nw">
                                     <div class="peer peer-greed">
-                                        <span id="sparklinedash2"></span>
+                                        <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-red-50 c-red-500">-7%</span>
                                     </div>
                                     <div class="peer">
                                         <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-red-50 c-red-500">-7%</span>
@@ -52,7 +52,7 @@
                             <div class="layer w-100">
                                 <div class="peers ai-sb fxw-nw">
                                     <div class="peer peer-greed">
-                                        <span id="sparklinedash3"></span>
+                                        <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-purple-50 c-purple-500">~12%</span>
                                     </div>
                                     <div class="peer">
                                         <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-purple-50 c-purple-500">~12%</span>
@@ -71,7 +71,7 @@
                             <div class="layer w-100">
                                 <div class="peers ai-sb fxw-nw">
                                     <div class="peer peer-greed">
-                                        <span id="sparklinedash4"></span>
+                                        <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-blue-50 c-blue-500">33%</span>
                                     </div>
                                     <div class="peer">
                                         <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-blue-50 c-blue-500">33%</span>
@@ -93,7 +93,7 @@
                             <div class="layer w-100">
                                 <div class="peers ai-sb fxw-nw">
                                     <div class="peer peer-greed">
-                                        <span id="sparklinedash"></span>
+                                        <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-green-50 c-green-500">+10%</span>
                                     </div>
                                     <div class="peer">
                                         <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-green-50 c-green-500">+10%</span>
@@ -112,7 +112,7 @@
                             <div class="layer w-100">
                                 <div class="peers ai-sb fxw-nw">
                                     <div class="peer peer-greed">
-                                        <span id="sparklinedash2"></span>
+                                        <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-red-50 c-red-500">-7%</span>
                                     </div>
                                     <div class="peer">
                                         <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-red-50 c-red-500">-7%</span>
@@ -131,7 +131,7 @@
                             <div class="layer w-100">
                                 <div class="peers ai-sb fxw-nw">
                                     <div class="peer peer-greed">
-                                        <span id="sparklinedash3"></span>
+                                        <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-purple-50 c-purple-500">~12%</span>
                                     </div>
                                     <div class="peer">
                                         <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-purple-50 c-purple-500">~12%</span>
@@ -150,7 +150,7 @@
                             <div class="layer w-100">
                                 <div class="peers ai-sb fxw-nw">
                                     <div class="peer peer-greed">
-                                        <span id="sparklinedash4"></span>
+                                        <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-blue-50 c-blue-500">33%</span>
                                     </div>
                                     <div class="peer">
                                         <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-blue-50 c-blue-500">33%</span>
