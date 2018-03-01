@@ -21,4 +21,5 @@ Route::group(
     ], function()
 {
     Route::get(LaravelLocalization::transRoute('routes.home'), 'Back\Dashboard\dashboardController@index')->name('home');
+    Route::get(LaravelLocalization::transRoute('routes.chat'), 'Back\Dashboard\dashboardController@chat')->name('chat');
 });

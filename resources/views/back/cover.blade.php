@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>@yield('title')</title>
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('css/flags.css')}}" rel="stylesheet">
     @yield('style')
     <style>
         #loader {
@@ -142,10 +143,10 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class='sidebar-link' href="forms.html">
-                <span class="icon-holder">
-                  <i class="c-deep-purple-500 ti-comment-alt"></i>
-                </span>
+                    <a class='sidebar-link' href="{{route('chat')}}">
+                        <span class="icon-holder">
+                        <i class="c-deep-purple-500 ti-comment-alt"></i>
+                        </span>
                         <span class="title">@lang('home.chat')</span>
                     </a>
                 </li>
@@ -218,6 +219,23 @@
                             <i class="ti-menu"></i>
                         </a>
                     </li>
+                    <li style="margin-top: 15px">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Languages
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                    @if($properties['native'] !=  LaravelLocalization::getCurrentLocaleName())
+                                        <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                            <img class="flag flag-{{$localeCode}}"/>
+                                            {{ $properties['native'] }}
+                                        </a>
+                                    @endif
+                                @endforeach
+                            </div>
+                        </div>
+                    </li>
                     <li class="search-box">
                         <a class="search-toggle no-pdd-right" href="javascript:void(0);">
                             <i class="search-icon ti-search pdd-right-10"></i>
@@ -228,6 +246,7 @@
                         <input class="form-control" type="text" placeholder="@lang('home.search')">
                     </li>
                 </ul>
+
                 <ul class="nav-right">
                     <li class="notifications dropdown">
                         <span class="counter bgc-red">3</span>
@@ -444,7 +463,8 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<script type="text/javascript" src="{{asset('js/vendor.js')}}"></script><script type="text/javascript" src="{{asset('js/bundle.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/vendor.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/bundle.js')}}"></script>
 @yield('script')
 
 </body>
