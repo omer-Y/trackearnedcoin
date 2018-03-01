@@ -15,6 +15,10 @@ class CreateMiningpoolhubTable extends Migration
     {
         Schema::create('miningpoolhub', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->decimal('confirmed',13,9);
+            $table->decimal('unconfirmed',13,9);
             $table->timestamps();
         });
     }

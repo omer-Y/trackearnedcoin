@@ -23,3 +23,7 @@ Route::group(
     Route::get(LaravelLocalization::transRoute('routes.home'), 'Back\Dashboard\dashboardController@index')->name('home');
     Route::get(LaravelLocalization::transRoute('routes.chat'), 'Back\Dashboard\dashboardController@chat')->name('chat');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

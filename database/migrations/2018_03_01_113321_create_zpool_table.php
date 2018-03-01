@@ -15,6 +15,13 @@ class CreateZpoolTable extends Migration
     {
         Schema::create('zpool', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->decimal('unsold',13,9);
+            $table->decimal('balance',13,9);
+            $table->decimal('unpaid',13,9);
+            $table->decimal('paid24h',13,9);
+            $table->decimal('total',13,9);
             $table->timestamps();
         });
     }

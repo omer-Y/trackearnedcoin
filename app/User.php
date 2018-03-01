@@ -2,28 +2,74 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable
+/**
+ * @property int $id
+ * @property string $email
+ * @property string $password
+ * @property string $remember_token
+ * @property string $created_at
+ * @property string $updated_at
+ * @property Ahashpool[] $ahashpools
+ * @property Hashrafinery[] $hashrafineries
+ * @property Miningpoolhub[] $miningpoolhubs
+ * @property Nanopool[] $nanopools
+ * @property UserInfo[] $userInfos
+ * @property Zpool[] $zpools
+ */
+class User extends Model
 {
-    use Notifiable;
-
     /**
-     * The attributes that are mass assignable.
-     *
      * @var array
      */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
+    protected $fillable = ['email', 'password', 'remember_token', 'created_at', 'updated_at'];
 
     /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    public function ahashpools()
+    {
+        return $this->hasMany('App\Ahashpool');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function hashrafineries()
+    {
+        return $this->hasMany('App\Hashrafinery');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function miningpoolhubs()
+    {
+        return $this->hasMany('App\Miningpoolhub');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function nanopools()
+    {
+        return $this->hasMany('App\Nanopool');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function userInfos()
+    {
+        return $this->hasMany('App\UserInfo');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function zpools()
+    {
+        return $this->hasMany('App\Zpool');
+    }
 }

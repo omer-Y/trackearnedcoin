@@ -2,6 +2,6 @@
 
 return [
     "home"     =>     "/",
-    "chat"     =>     "/chat",
+    "chat"     =>     "chat",
     //"view"         =>     "view/{id}", //we add a route parameter
 ];
